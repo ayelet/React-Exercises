@@ -2,12 +2,7 @@ import React from "react";
 import Card from "./Card";
 import "./Card.css";
 
-// <MyButton text="Important" weight="Bold" />
-// <MyButton text="Not Important" weight="Regular" />
-// const data = [
-//   { text: "Important", weight: "bold" },
-//   { text: "Not important", weight: "regular" },
-// ];
+
 const cardsData = [
   {
     imageUrl:
