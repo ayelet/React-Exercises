@@ -1,5 +1,7 @@
 import React from "react";
+import RainboxBox from "./Components/Ex8.2_RainboxBox/RainbowBox";
 import FavColor from "./Components/Ex8_1/Ex8_1";
+import AnimationContainer from "./Components/Ex8_1_animations/AnimationContainer";
 // import Hello from "./Components/Ex2_2/Ex2_2";
 // import Boxes from "./Components/Ex3_1/Boxes";
 // import Quiz from "./Components/Quiz/Quiz";
@@ -13,7 +15,10 @@ function App() {
   return (
     <div>
       <FavColor />
-
+      <h2>Animated Box</h2>
+      <AnimationContainer />
+      <h2>Rainbox Box</h2>
+      <RainboxBox />
     </div>
   );
 }

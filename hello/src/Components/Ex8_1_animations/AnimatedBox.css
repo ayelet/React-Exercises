@@ -1,0 +1,15 @@
+.animated {
+  width: 400px;
+  height: 400px;
+  background-color: cornflowerblue;
+  animation: slide 2s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
