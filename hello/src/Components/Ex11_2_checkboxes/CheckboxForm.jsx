@@ -1,39 +1,36 @@
 import React, { Component } from "react";
+
 class CheckboxForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { color: "red" };
-    this.colors = ["red", "green", "blue"];
-  }
-
-  onChangeColor(e) {
-    console.log(e.target);
+    this.state = { checkbox: "" };
+    this.checkboxList = [
+      { isCheck: false, desc: "I have read" },
+      { isCheck: false, desc: "I agree" },
+      { isCheck: true, desc: "Yes I can" },
+      { isCheck: true, desc: "I am" },
+    ];
   }
 
   render() {
     return (
       <div className="btn-container">
-        {this.colors.map((color) => {
+        {this.checkboxList.map((element, i) => {
+          console.log(element.isCheck, element.desc);
           return (
-            <input
-              className="btn"
-              type="button"
-              style={{ backgroundColor: color }}
-              value={color}
-              onClick={(e) => this.setState({ color: e.target.value })}
-            ></input>
+            <div>
+              <input
+                id={`checkbox-${i}`}
+                type="checkbox"
+                defaultChecked={element.isCheck}
+                onChange={() => {
+                  this.setState({ checkbox: !this.state.checkbox });
+                }}
+              />
+              <label for={`checkbox-${i}`}>{`${element.desc}`}</label>
+            </div>
           );
         })}
-        <label
-          style={{
-            textAlign: "center",
-            fontSize: "24px",
-            color: this.state.color,
-            display: "inline",
-          }}
-        >
-          {this.state.color}
-        </label>
       </div>
     );
   }
