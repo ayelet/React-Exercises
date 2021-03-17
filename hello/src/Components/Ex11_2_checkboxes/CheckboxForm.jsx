@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import "./ButtonContainer.css";
-
-class ButtonContainer extends Component {
+class CheckboxForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { color: "" };
+    this.state = { color: "red" };
     this.colors = ["red", "green", "blue"];
   }
 
@@ -41,4 +39,4 @@ class ButtonContainer extends Component {
   }
 }
 
-export default ButtonContainer;
+export default CheckboxForm;
