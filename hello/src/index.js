@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./Components/Ex11_2_checkboxes/App";
+import App from "./Components/Ex11_3_Form/App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
