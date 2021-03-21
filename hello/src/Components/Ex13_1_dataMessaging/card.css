@@ -1,0 +1,13 @@
+.card {
+  width: 250px;
+  height: fit-content;
+  margin: 10px;
+  border: 4px dashed lightcoral;
+  background: lightgrey;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card > ul > li {
+  list-style: none;
+}
