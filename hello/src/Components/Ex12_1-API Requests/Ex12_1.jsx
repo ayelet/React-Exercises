@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import chuck from "./img/funny-chuck-norris-meme.jpg";
 
 class JokeApi extends Component {
   constructor(props) {
@@ -55,6 +56,7 @@ class JokeApi extends Component {
           <legend>Category: {this.state.currentCategory}</legend>
           <span>{this.state.joke} </span>
         </fieldset>
+        <img alt="funny chuck norris meme" src={chuck} width={"480px"}></img>
       </div>
     );
   }
