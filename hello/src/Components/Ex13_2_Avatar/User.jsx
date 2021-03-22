@@ -7,13 +7,15 @@ class User extends Component {
     this.state = {
       name: `${props.data.name.first} ${props.data.name.last}`,
       image: props.data.picture.large,
+      id: props.data.login.username,
     };
   }
   render() {
+    const { name, image, id } = this.state;
     return (
-      <div className="card">
-        <h3>{this.state.name}</h3>
-        <img alt={this.state.name} src={this.state.image}></img>
+      <div id={id} className="user">
+        <h3>{name}</h3>
+        <img alt={name} src={image}></img>
       </div>
     );
   }

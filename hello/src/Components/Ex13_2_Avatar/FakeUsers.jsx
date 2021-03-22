@@ -15,7 +15,8 @@ class FakeUsers extends Component {
   }
 
   getUsers = () => {
-    const baseUrl = "https://randomuser.me/api/?results=100&inc=name,picture";
+    const baseUrl =
+      "https://randomuser.me/api/?results=100&inc=name,picture,login";
     axios.get(baseUrl).then((res) => {
       const users = res.data.results;
       this.setState({ users });
@@ -41,17 +42,27 @@ class FakeUsers extends Component {
   };
 
   renderUsers() {
-    return this.state.users.map((user) => <User data={user} />);
+    return this.state.users.map((user, i) => (
+      <User key={i} data={user} />
+    ));
   }
 
   renderFilteredUsers() {
-    return this.state.users
-      .filter((user) =>
-        (user.name.first + user.name.last)
-          .toLowerCase()
-          .includes(this.state.filterString.toLowerCase())
-      )
-      .map((user) => <User data={user} />);
+    let str = this.state.filterString;
+    console.log(str);
+    let newArr = this.state.users.filter((user) =>
+      (user.name.first + user.name.last)
+        .toLowerCase()
+        .includes(str.toLowerCase())
+    );
+    console.log(newArr);
+    return newArr.map((user, i) => <User key={i} data={user} />);
+    // .filter((user) =>
+    //     (user.name.first + user.name.last)
+    //       .toLowerCase()
+    //       .includes(this.state.filterString.toLowerCase())
+    //   )
+    //   .map((user) => <User data={user} />);
   }
 
   render() {
