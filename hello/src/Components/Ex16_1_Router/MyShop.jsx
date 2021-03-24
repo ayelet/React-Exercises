@@ -4,6 +4,7 @@ import data from "./store";
 import Header from "./Header";
 import Home from "./Home";
 import Products from "./Products";
+import ProductDetail from "./ProductDetail";
 
 class MyShop extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -35,7 +36,8 @@ class MyShop extends Component {
         <BrowserRouter>
           <Header />
           <Route path="/" exact component={Home} />
-          <Route path="/Products" component={Products } />
+          <Route path="/Products" exact component={Products} />
+          <Route path="/Products/:id" component={ProductDetail} />
         </BrowserRouter>
       </div>
     );
