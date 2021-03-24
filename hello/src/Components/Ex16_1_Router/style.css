@@ -1,0 +1,17 @@
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  border: 5px solid slateblue;
+  margin: 20px auto;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
