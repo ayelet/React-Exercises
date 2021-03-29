@@ -1,5 +1,6 @@
 import "./style.css";
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import data from "./store";
 
 class ProductDetail extends Component {
@@ -17,11 +18,13 @@ class ProductDetail extends Component {
   renderProduct() {
     console.log("render", this.state.id, this.state.data.price);
     return (
+      
       <div className="product-container">
         <h1>{this.state.data.title}</h1>
         <img src={this.state.data.imageUrl} alt={this.state.data.title} />
         <p>Size: {this.state.data.size}</p>
         <p>Price: {this.state.data.price}$</p>
+        <Link to="/Products" className="btn" >Back</Link>
       </div>
     );
   }
