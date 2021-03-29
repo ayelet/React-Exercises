@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+}
+.card {
+  border: 5px solid cornsilk;
+  margin: 20px auto;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+  width: 120px;
+  height: 50px;
+  background: cornsilk;
+  border-radius: 12px;
+  outline: none;
+  text-align: center;
+}
+
+.sm-btn {
+  width: 50px;
+  margin: 5px;
+}
