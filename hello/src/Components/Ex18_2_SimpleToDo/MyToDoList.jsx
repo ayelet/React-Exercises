@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import MyToDo from "./MyToDo";
 
-
-
 const MyToDoList = (props) => {
-
   return (
     <div className="container">
       {props.data.map((item) => (
