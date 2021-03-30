@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import App from "./Components/Ex19_3_Alogolia/App";
+import App from "./Components/Ex19.4-ChuckNorrisWithHooks/App";
 
 ReactDOM.render(
   <React.StrictMode>
