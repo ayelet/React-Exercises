@@ -19,9 +19,9 @@ body {
 
 .btn {
   width: 120px;
-  height: 50px;
+  height: 40px;
   background: cornsilk;
-  border-radius: 12px;
+  border-radius: 8px;
   outline: none;
   text-align: center;
 }

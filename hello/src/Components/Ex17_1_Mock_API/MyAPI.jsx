@@ -19,10 +19,22 @@ class MyAPI extends Component {
     });
   }
 
-  AddNewAuthor = (e) => {
+  AddNewAuthor = (author) => {
     this.setState({ newAuthor: true });
     console.log("new author form", this.state.newAuthor);
-    console.log(e.currentTarget);
+    axios
+      .post(this.baseUrl, author)
+      .then((res) => {
+        this.setState({ newAuthor: false });
+        console.log(res);
+      })
+      .then(
+        axios.get(this.baseUrl).then((res) => {
+          const authors = res.data;
+          this.setState({ authors: authors });
+          console.log("Authors: ", this.state.authors);
+        })
+      );
   };
 
   onCancel = (e) => {

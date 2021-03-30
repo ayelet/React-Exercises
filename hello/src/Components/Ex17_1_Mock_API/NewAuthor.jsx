@@ -24,11 +24,12 @@ class NewAuthor extends Component {
 
   onSubmit = (e) => {
     // validate data
+    e.preventDefault();
     if (!this.state.isValidUrl || !this.state.isValidName) {
       this.setState({ error: "Invalid fields, please try again" });
-      e.preventDefault();
     } else {
-      this.props.onSubmit();
+      const author = { name: e.target[0].value, avatar: e.target[1].value };
+      this.props.onSubmit(author);
     }
   };
 
