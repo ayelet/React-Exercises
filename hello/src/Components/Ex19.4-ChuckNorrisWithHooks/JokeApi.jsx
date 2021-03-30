@@ -14,7 +14,7 @@ export default function SearchAlgolia() {
     axios.get(baseUrl + currentCategory).then((res) => {
       setJoke(res.data.value);
     });
-    console.log("joke retrieved: " + joke);
+    // console.log("joke retrieved: " + joke);
   }, [currentCategory]);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function SearchAlgolia() {
       // Something happened in setting up the request and triggered an Error
       console.log("Error", error.message);
     }
-    console.log(error);
+    // console.log(error);
   };
   return (
     <div>
